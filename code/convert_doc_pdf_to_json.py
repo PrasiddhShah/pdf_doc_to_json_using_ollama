@@ -140,8 +140,12 @@ class DocumentConverter:
             # Copy original file to output directory
             shutil.copy2(file_path, output_dir / file_path.name)
             
-            print(f"Successfully processed {input_file}")
-            print(f"JSON output saved to: {json_file_path}")
+            # Remove the file from input directory after successful processing and copying
+            file_path.unlink()
+            
+            #print(f"Successfully processed {input_file}")
+            #print(f"JSON output saved to: {json_file_path}")
+            #print(f"Original file moved to output directory and removed from input")
             
         except Exception as e:
             print(f"Error processing file {input_file}: {e}")
