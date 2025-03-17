@@ -1,31 +1,34 @@
-Here is the converted text to a structured JSON format:
+Here is the converted text into a structured JSON format:
 
-```
+```json
 {
     "Contoso": {
-        "Invoice": {
-            "For": {
-                "Company": "Microsoft",
-                "Address": {
-                    "Street": "1020 Enterprise Way",
-                    "City": "Sunnayvale",
-                    "State": "CA",
-                    "Zip": "87659"
-                }
+        "InvoiceFor": "Microsoft",
+        "Address": [
+            {
+                "Street": "1020 Enterprise Way",
+                "City": "Sunnayvale",
+                "State": "CA",
+                "ZipCode": 87659
             },
-            "Other Address": {
+            {
                 "Street": "1 Redmond way",
-                "Suite": 6000,
+                "Suite": "6000",
                 "City": "Redmond",
                 "State": "WA"
-            },
-            "Invoice Details": [
-                ["Invoice Number", "Invoice Date", "Invoice Due Date", "Charges", "VAT ID"],
-                ["34278587", "6/18/2017", "6/24/2017", "$56,651.49", "PT"]
-            ]
-        }
+            }
+        ],
+        "InvoiceDetails": [
+            {
+                "InvoiceNumber": "34278587",
+                "InvoiceDate": "6/18/2017",
+                "InvoiceDueDate": "6/24/2017",
+                "Charges": "$56,651.49",
+                "VATID": "PT"
+            }
+        ]
     }
 }
 ```
 
-Please note that I've assumed the VAT ID is not a numerical value and should be treated as text. If it's actually a numeric code, please let me know and I'll adjust the JSON accordingly.
+Let me know if you need any further assistance!

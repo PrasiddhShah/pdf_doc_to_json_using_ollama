@@ -5,6 +5,7 @@ from pathlib import Path
 from ollama import Client
 from PyPDF2 import PdfReader
 from docx import Document
+from tqdm import tqdm
 
 class DocumentConverter:
     def __init__(self):
@@ -15,7 +16,7 @@ class DocumentConverter:
         """Extract text from PDF file"""
         reader = PdfReader(file_path)
         text = ""
-        for page in reader.pages:
+        for page in tqdm(reader.pages, desc="Processing PDF pages", unit="page"):
             text += page.extract_text() + "\n"
         return text
 
@@ -40,12 +41,12 @@ class DocumentConverter:
         }
 
         # Extract paragraphs
-        for paragraph in doc.paragraphs:
+        for paragraph in tqdm(doc.paragraphs, desc="Processing paragraphs", unit="para"):
             if paragraph.text.strip():  # Only add non-empty paragraphs
                 content["paragraphs"].append(paragraph.text.strip())
 
         # Extract tables
-        for table in doc.tables:
+        for table in tqdm(doc.tables, desc="Processing tables", unit="table"):
             table_data = self.extract_table_data(table)
             if table_data:  # Only add non-empty tables
                 content["tables"].append(table_data)
@@ -153,10 +154,12 @@ def main():
         print("Input directory not found!")
         return
     
-    # Process all PDF and DOC files in the input directory
-    for file_path in input_dir.glob('*.*'):
-        if file_path.suffix.lower() in ['.pdf', '.doc', '.docx']:
-            converter.process_file(str(file_path))
+    # Get list of files to process
+    files_to_process = [f for f in input_dir.glob('*.*') if f.suffix.lower() in ['.pdf', '.doc', '.docx']]
+    
+    # Process all PDF and DOC files in the input directory with progress bar
+    for file_path in tqdm(files_to_process, desc="Processing files", unit="file"):
+        converter.process_file(str(file_path))
 
 if __name__ == "__main__":
     main() 
