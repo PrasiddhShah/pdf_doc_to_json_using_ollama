@@ -1,0 +1,92 @@
+Here is the converted text into a structured JSON format:
+
+```
+{
+    "documentContent": {
+        "paragraphs": [
+            {
+                "text": "Section heading and hierarchy issues"
+            },
+            {
+                "text": "Section headings are identified as paragraphs. Also nesting levels of section headings are not maintained i.e., there is no way to identify child sections of a parent section."
+            },
+            {
+                "title": "Parent section (Heading 1)"
+            },
+            {
+                "title": "Child section 1 (Heading 2)"
+            },
+            {
+                "text": "Reading is easier, too, in the new Reading view. You can collapse parts of the document and focus on the text you want. If you need to stop reading before you reach the end, Word remembers where you left off - even on another device."
+            },
+            {
+                "title": "Video provides a powerful way to help you prove your point."
+            },
+            {
+                "text": "When you click Online Video, you can paste in the embed code for the video you want to add."
+            },
+            {
+                "title": "Child section 2 (Heading 2)"
+            },
+            {
+                "text": "If you need to stop reading before you reach the end, Word remembers where you left off - even on another device."
+            },
+            {
+                "title": "Child 1 of child section 2 (Heading 3)"
+            },
+            {
+                "daysOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                    "Sunday"
+                ]
+            },
+            {
+                "monthsOfYear": [
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December"
+                ]
+            }
+        ],
+        "tables": [
+            {
+                "name": "Table 1",
+                "data": [
+                    ["Reference", "Title"],
+                    ["DDS-70209", "Material-Document Numbering System [DDS-1603] Procedure"],
+                    ["DDS-70223", "Template, Specification Sheet For Commercial Fasteners [DDS-2011] Form"],
+                    ["DDS-70263", "Standard, Finish Callout and Common Finish Specifications [DDS-5001] Procedure"],
+                    ["DDS-70264", "Engineering Design-Drafting Standards – General Methods For Tabulation [DDS-5002] Procedure"],
+                    ["DDS-70265", "Document Approval and Revision History Block [DDS-5004] Procedure"],
+                    ["DDS-70266", "Engineering Design-Drafting Standards, Tolerances [DDS-5005] Procedure"],
+                    ["DDS-70267", "Standard Notes [DDS-5006] Form"],
+                    ["DDS-70268", "Engineering Design-Drafting – Design Guideline [DDS-5007] Procedure"],
+                    ["DDS-70269", "Lam Specification Sheets-  Source Controlled and Specification Controlled [DDS-5008] Procedure"],
+                    ["DDS-70270", "Engineering Design-Drafting Standards – Procedures and Functional Specifications [DDS-5010] Procedure"],
+                    ["DDS-70271", "Engineering Design-Drafting Standard – Modifications, Parts and Assemblies [DDS-5011] Procedure"],
+                    ["DDS-70272", "Part Cleaning [DDS-5012] Procedure"],
+                    ["DDS-70273", "Part Marking, Packaging, and Silkscreening [DDS-5013] Procedure"],
+                    ["DDS-70274", "Engineering Design-Drafting Standards – Bills Of Materials Associated with Engineering Drawings [DDS-5014] Procedure"],
+                    ["DDS-70282", "Drawing Templates and Standard Notes [DDS-51023] Procedure"]
+                ]
+            }
+        ]
+    }
+}
+```
+
+Note: The JSON structure maintains the original content and context of the text, including the paragraphs, tables, and subheadings.
